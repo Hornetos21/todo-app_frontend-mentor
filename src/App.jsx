@@ -14,8 +14,10 @@ export default function App() {
         <Header />
         <div className="todos">
           <NewTodo />
-          <TodoList />
-          <FooterList />
+          <div className="todos-list">
+            <TodoList />
+            <FooterList />
+          </div>
         </div>
         <p className="dnd-text">Drag and drop to reorder list</p>
       </div>

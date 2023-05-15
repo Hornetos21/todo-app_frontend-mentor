@@ -5,7 +5,7 @@ const Filters = () => {
   const clazz = (str) => (activeFilter === str ? 'link--active link' : 'link')
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem' }}>
+    <div className="filters filters--mobile block">
       <Link to="/all" className={clazz('all')}>
         All
       </Link>

@@ -6,7 +6,7 @@ import throttle from 'lodash/throttle'
 
 export const cofigureStore = () => {
   const persistedState = loadState()
-  console.log(persistedState)
+
   const store = createStore(
     rootReducer,
     persistedState,

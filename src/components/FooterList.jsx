@@ -7,7 +7,7 @@ const FooterList = () => {
 
   return (
     <div className="footer-list block">
-      <div>{todosLeft.length} items left</div>
+      <div className="length-todos">{todosLeft.length} items left</div>
       <Filters />
       <span className="clear-btn">Clear Completed</span>
     </div>

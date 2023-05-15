@@ -6,13 +6,13 @@ export const NewTodo = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log(event.target)
+
     dispatch(addTodo(event.target.title.value))
     event.target.reset()
   }
 
   return (
-    <form className="form block radius" onSubmit={handleSubmit}>
+    <form className="form block" onSubmit={handleSubmit}>
       <div className="checker"></div>
       <input
         type="text"
