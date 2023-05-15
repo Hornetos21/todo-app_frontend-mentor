@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary-BrightBlue: hsl(220, 98%, 61%);
+    /*Check Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)*/
+
+}
+
+*, ::before,::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+
+    border-width: 0;
+    border-color: hsl(233, 11%, 84%);
+    border-style: solid;
+}
+
+ul {
+    list-style: none;
+}
+
+body[data-theme='light'] {
+    --bg: hsl(0, 0%, 98%);
+    --bg-content: hsl(0, 0%, 100%);
+    --1111: hsl(236, 33%, 92%);
+    --LightGrayishBlue: hsl(233, 11%, 84%);
+    --111text-todo: hsl(236, 9%, 61%);
+    --text-todo: hsl(235, 19%, 35%);
+}
+
+body[data-theme='dark'] {
+    --bg: hsl(235, 21%, 11%);
+    --bg-content: hsl(235, 24%, 19%);
+    --LightGrayishBlue: hsl(234, 39%, 85%);
+    --LightGrayishBlueHover: hsl(236, 33%, 92%);
+    --DarkGrayishBlue: hsl(234, 11%, 52%);
+    --VeryDarkGrayishlue: hsl(233, 14%, 35%);
+    --VeryDarkGrayishBlue: hsl(237, 14%, 26%);
+}
+
+body[data-theme='light'] .bg {
+    --image-bg-desk: url("./assets/bg-desktop-light.jpg");
+    --image-bg-mob: url("./assets/bg-mobile-light.jpg");
+}
+
+body[data-theme='dark'] .bg {
+    --image-bg-desk: url("./assets/bg-desktop-dark.jpg");
+    --image-bg-mob: url("./assets/bg-mobile-dark.jpg");
+}
+
+body {
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bg);
+}
+
+.link {
+    text-decoration: none;
+    color: var(--DarkGrayishBlue);
+}
+
+.link:hover {
+    color: var(--VeryDarkGrayishBlue);
+}
+
+.link--active {
+    color: var(--primary-BrightBlue)
+}
+
+.container {
+    margin: 0 auto;
+    /*max-width: 540px;*/
+    /*padding-top: 78px;*/
+    padding: 48px 24px;
+    position: relative;
+}
+
+/*Header*/
+.bg {
+    background: var(--image-bg-desk) center/cover no-repeat;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+}
+
+h1 {
+    color: hsl(0, 0%, 98%);
+    letter-spacing: 10px;
+    font-size: 27px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;*/
+    margin-bottom: 34px;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+/*----------------------*/
+.block {
+    padding: 14px 20px;
+    background-color: var(--bg-content);
+
+}
+
+.todos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 327px;
+    /*margin-top: 158px;*/
+}
+
+.checker {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-width: 2px;
+    cursor: pointer;
+    margin-right: 12px;
+
+
+}
+/*.checker::before{*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    right: 4%;*/
+/*    left: 4%;*/
+/*    top: 4%;*/
+/*    bottom: 4%;*/
+/*    border-radius: 100px;*/
+/*}*/
+
+/*NewTodo*/
+.form {
+    display: flex;
+    margin-bottom: 17px;
+    width: 100%;
+}
+
+.new-todo {
+    width: 80%;
+    border: none;
+    font-size: 12px;
+    outline: 2px solid transparent;
+    color: var(--text-todo);
+}
+
+/*----------------------*/
+
+/*List*/
+.list {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 3px 15px 0 hsl(235deg 19% 35% / 30%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.todo {
+    padding:16px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px hsl(233, 11%, 84%);
+    background-color: var(--bg-content);
+    color: var(--text-todo);
+    font-weight: 300;
+    font-size: 12px;
+
+}
+
+label {
+    cursor: pointer;
+}
+
+.todo .delete-btn {
+    transition: opacity 0.3s ease-in;
+}
+
+.delete-btn {
+    background: url("./assets/icon-cross.svg") center/cover no-repeat;
+    padding: 5px;
+    /*opacity: 0;*/
+    border: none;
+
+}
+
+
+.todo:hover .delete-btn {
+    opacity: 1;
+    cursor: pointer;
+
+}
+
+.footer-list {
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.clear-btn {
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    color: var(--DarkGrayishBlue);
+}
+
+.clear-btn:hover {
+    color: var(--VeryDarkGrayishBlue);
+}
+
+/*-----------------*/
+
+
+.radius {
+    border-radius: 5px;
+}
+
+
+
+
+.dnd-text {
+    text-align: center;
+    margin-top: 50px;
+}
+
