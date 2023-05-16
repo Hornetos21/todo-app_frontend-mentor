@@ -1,11 +1,15 @@
 import { Link, useParams } from 'react-router-dom'
+import useMediaQuery from '../hooks/useMediaQuery.js'
 
 const Filters = () => {
   const { filter: activeFilter = 'all' } = useParams()
+  const mediaQuery = useMediaQuery('(min-width: 550px)')
   const clazz = (str) => (activeFilter === str ? 'link--active link' : 'link')
 
+  const classMedia = mediaQuery ? '' : 'filters--mobile block'
+
   return (
-    <div className="filters filters--mobile block">
+    <div className={`filters ${classMedia}`}>
       <Link to="/all" className={clazz('all')}>
         All
       </Link>
@@ -19,4 +23,4 @@ const Filters = () => {
   )
 }
 
-export { Filters }
+export default Filters

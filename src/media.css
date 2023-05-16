@@ -1,0 +1,77 @@
+@media screen and (min-width: 550px) {
+    body {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        padding: 7.8rem 0;
+    }
+
+    .block {
+        padding: 1.9rem 2rem;
+    }
+
+    .header {
+        margin-bottom: 4.2rem;
+    }
+
+    .form {
+        margin-bottom: 2.5rem;
+    }
+
+    .checker {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-right: 2.5rem;
+
+    }
+
+    .todo .checker:checked::before {
+        top: 0.8rem;
+        right: 0.5rem;
+    }
+
+    .todo .checker:hover:not(:checked)::after {
+        width: 2.2rem;
+        height: 2.2rem;
+        left: 0.15rem;
+    }
+
+    .todo {
+        padding: 2rem;
+    }
+
+    .delete-btn {
+        padding: 0.9rem;
+        margin-right: 0.7rem;
+        opacity: 0;
+    }
+
+    .icon {
+        height: 2.8rem;
+        width: 2.8rem;
+    }
+
+    h1 {
+        font-size: 3.9rem;
+        letter-spacing: 1.5rem;
+    }
+
+    .bg {
+        background: var(--image-bg-desk) center/cover no-repeat;
+        height: 30rem;
+    }
+
+    .footer-list {
+        font-size: 1.4rem;
+    }
+
+    .clear-btn {
+        margin-right: 0.7rem;
+    }
+
+    .dnd-text {
+        margin-top: 5.2rem;
+        letter-spacing: -0.1px;
+    }
+}

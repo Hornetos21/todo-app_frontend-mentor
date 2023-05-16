@@ -4,13 +4,13 @@ import { TodoList } from './components/TodoList'
 import './index.css'
 import FooterList from './components/FooterList.jsx'
 import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
 
 export default function App() {
   return (
-    <main>
+    <>
       <div className="bg"></div>
       <div className="container">
-        <div className="BG"></div>
         <Header />
         <div className="todos">
           <NewTodo />
@@ -21,6 +21,7 @@ export default function App() {
         </div>
         <p className="dnd-text">Drag and drop to reorder list</p>
       </div>
-    </main>
+      <Footer />
+    </>
   )
 }

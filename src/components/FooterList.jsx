@@ -1,4 +1,4 @@
-import { Filters } from './Filters.jsx'
+import Filters from './Filters.jsx'
 import { useSelector } from 'react-redux'
 import { selectVisibleTodos } from '../store/todos/todos-selectors.js'
 
@@ -7,7 +7,9 @@ const FooterList = () => {
 
   return (
     <div className="footer-list block">
-      <div className="length-todos">{todosLeft.length} items left</div>
+      <div className="length-todos">
+        {todosLeft.length} item{todosLeft.length === 1 ? '' : 's'} left
+      </div>
       <Filters />
       <span className="clear-btn">Clear Completed</span>
     </div>
