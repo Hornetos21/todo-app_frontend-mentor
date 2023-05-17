@@ -1,12 +1,19 @@
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import iconMoon from '../assets/icon-moon.svg'
 import iconSun from '../assets/icon-sun.svg'
-import { useEffect, useState } from 'react'
+import { setTheme } from '../store/theme/theme-action'
 
 const Header = () => {
-  const themeInit = 'light'
-  const [theme, setTheme] = useState(themeInit)
+  const dispatch = useDispatch()
+
+  const theme = useSelector((state) => state.theme)
+  const toggleTheme = () =>
+    dispatch(setTheme(theme === 'light' ? 'dark' : 'light'))
+
   useEffect(() => {
     document.body.setAttribute('data-theme', theme)
+    dispatch(setTheme(theme))
   }, [theme])
 
   return (
@@ -16,9 +23,7 @@ const Header = () => {
         className="icon"
         src={theme === 'light' ? iconMoon : iconSun}
         alt="moon"
-        onClick={() =>
-          theme === 'light' ? setTheme('dark') : setTheme('light')
-        }
+        onClick={toggleTheme}
       />
     </div>
   )
