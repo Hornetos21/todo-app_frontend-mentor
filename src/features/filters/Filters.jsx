@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import useMediaQuery from '../hooks/useMediaQuery.js'
+import useMediaQuery from '../../hooks/useMediaQuery.js'
 
 const Filters = () => {
   const { filter: activeFilter = 'all' } = useParams()

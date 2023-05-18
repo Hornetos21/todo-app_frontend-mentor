@@ -2,11 +2,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
 import { Reorder } from 'framer-motion'
-import {
-  removeTodo,
-  selectVisibleTodos,
-  toggleTodo,
-} from '../features/todos/todo-slice.js'
+import { removeTodo, selectVisibleTodos, toggleTodo } from './todo-slice.js'
 
 export const TodoList = () => {
   const dispatch = useDispatch()
