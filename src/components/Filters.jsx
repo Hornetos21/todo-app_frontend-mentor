@@ -6,7 +6,7 @@ const Filters = () => {
   const mediaQuery = useMediaQuery('(min-width: 550px)')
   const clazz = (str) => (activeFilter === str ? 'link--active link' : 'link')
 
-  const classMedia = mediaQuery ? '' : 'filters--mobile block'
+  const classMedia = mediaQuery ? '' : 'theme--mobile block'
 
   return (
     <div className={`filters ${classMedia}`}>

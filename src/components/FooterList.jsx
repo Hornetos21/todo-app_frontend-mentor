@@ -1,9 +1,15 @@
 import Filters from './Filters.jsx'
-import { useSelector } from 'react-redux'
-import { selectVisibleTodos } from '../store/todos/todos-selectors.js'
+import { useDispatch, useSelector } from 'react-redux'
+import {
+  clearCompleted,
+  selectVisibleTodos,
+} from '../features/todos/todo-slice.js'
+// import { selectVisibleTodos } from '../store/todos/todos-selectors.js'
 
 const FooterList = () => {
+  const dispatch = useDispatch()
   const todosLeft = useSelector((state) => selectVisibleTodos(state, 'active'))
+  const handleClear = () => dispatch(clearCompleted())
 
   return (
     <div className="footer-list block">
@@ -11,7 +17,9 @@ const FooterList = () => {
         {todosLeft.length} item{todosLeft.length === 1 ? '' : 's'} left
       </div>
       <Filters />
-      <span className="clear-btn">Clear Completed</span>
+      <span className="clear-btn" onClick={handleClear}>
+        Clear Completed
+      </span>
     </div>
   )
 }

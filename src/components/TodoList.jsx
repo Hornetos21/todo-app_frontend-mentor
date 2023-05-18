@@ -1,12 +1,17 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { removeTodo, toggleTodo } from '../store/todos/todos-actions'
-import { selectVisibleTodos } from '../store/todos/todos-selectors'
+// import { removeTodo, toggleTodo } from '../store/todos/todos-actions'
+// import { selectVisibleTodos } from '../store/todos/todos-selectors'
 import { DragDropContext, Draggable } from 'react-beautiful-dnd'
 import { StrictModeDroppable as Droppable } from '../helpers/StrictModeDroppable.jsx'
 import { useEffect, useState } from 'react'
 import { loadState, saveState } from '../store/local-storage.js'
 import { Reorder } from 'framer-motion'
+import {
+  removeTodo,
+  selectVisibleTodos,
+  toggleTodo,
+} from '../features/todos/todo-slice.js'
 
 export const TodoList = () => {
   const dispatch = useDispatch()
@@ -76,16 +81,16 @@ export const TodoList = () => {
           </ul>
         )*/
 
-  const [todos, setTodos] = useState(data)
-  useEffect(() => {
-    // console.log('effect:', todos)
-    saveState({ todos })
-  }, [todos])
+  // const [todos, setTodos] = useState(data)
+  // useEffect(() => {
+  //   // console.log('effect:', todos)
+  //   saveState({ todos })
+  // }, [todos])
 
   return (
     <ul className="list">
-      <Reorder.Group values={todos} onReorder={setTodos} axis="y">
-        {todos.map((todo) => (
+      <Reorder.Group values={data} onReorder={() => {}} axis="y">
+        {data.map((todo) => (
           <Reorder.Item
             className="todo"
             key={todo.id}

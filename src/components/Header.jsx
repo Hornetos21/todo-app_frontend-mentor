@@ -2,7 +2,8 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import iconMoon from '../assets/icon-moon.svg'
 import iconSun from '../assets/icon-sun.svg'
-import { setTheme } from '../store/theme/theme-action'
+import { setTheme } from '../features/theme/theme-slice.js'
+// import { setTheme } from '../store/theme/theme-action'
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -13,7 +14,6 @@ const Header = () => {
 
   useEffect(() => {
     document.body.setAttribute('data-theme', theme)
-    dispatch(setTheme(theme))
   }, [theme])
 
   return (
