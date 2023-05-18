@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import iconMoon from '../assets/icon-moon.svg'
 import iconSun from '../assets/icon-sun.svg'
 import { setTheme } from '../features/theme/theme-slice.js'
-// import { setTheme } from '../store/theme/theme-action'
 
 const Header = () => {
   const dispatch = useDispatch()

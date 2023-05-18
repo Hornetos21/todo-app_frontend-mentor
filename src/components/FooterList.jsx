@@ -4,7 +4,6 @@ import {
   clearCompleted,
   selectVisibleTodos,
 } from '../features/todos/todo-slice.js'
-// import { selectVisibleTodos } from '../store/todos/todos-selectors.js'
 
 const FooterList = () => {
   const dispatch = useDispatch()
