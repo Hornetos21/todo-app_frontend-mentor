@@ -1,5 +1,6 @@
 import {
   ADD_TODO,
+  CLEAR_COMPLETED,
   REMOVE_TODO,
   REORDER_TODO,
   TOGGLE_TODO,
@@ -19,4 +20,7 @@ export const toggleTodo = (id) => ({
 })
 export const reorderTodo = () => ({
   type: REORDER_TODO,
+})
+export const clearCompleted = () => ({
+  type: CLEAR_COMPLETED,
 })

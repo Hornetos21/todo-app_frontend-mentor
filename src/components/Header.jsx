@@ -13,7 +13,6 @@ const Header = () => {
 
   useEffect(() => {
     document.body.setAttribute('data-theme', theme)
-    dispatch(setTheme(theme))
   }, [theme])
 
   return (
