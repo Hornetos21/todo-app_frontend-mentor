@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="attribution">
       Challenge by{' '}
-      <a className="link" href={urlChallenge} target="_blank">
+      <a className="link" href={urlChallenge} target="_blank" rel="noreferrer">
         Frontend Mentor
       </a>
       . Coded by{' '}
