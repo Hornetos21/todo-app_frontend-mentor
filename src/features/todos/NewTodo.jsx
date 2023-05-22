@@ -1,15 +1,7 @@
-import { useDispatch } from 'react-redux'
-import { addTodo } from './todo-slice.js'
+import { useSubmit } from './useSubmit.js'
 
 export const NewTodo = () => {
-  const dispatch = useDispatch()
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-
-    dispatch(addTodo(event.target.title.value))
-    event.target.reset()
-  }
+  const handleSubmit = useSubmit()
 
   return (
     <form className="form block" onSubmit={handleSubmit}>

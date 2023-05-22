@@ -150,8 +150,11 @@ h1 {
 /*----------------------*/
 
 /*List*/
-
+.list{
+    position: relative;
+}
 .todo {
+    position: relative;
     padding: 16px 20px;
     display: flex;
     align-items: center;
@@ -159,6 +162,7 @@ h1 {
     background-color: var(--bg-content);
     color: var(--text-todo);
     font-weight: 300;
+    cursor: grab;
 }
 
 .checker {

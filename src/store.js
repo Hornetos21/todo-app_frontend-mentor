@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { todoReducer } from '../features/todos/todo-slice.js'
-import { themeReducer } from '../features/theme/theme-slice.js'
+import { todoReducer } from './features/todos/todo-slice.js'
+import { themeReducer } from './features/theme/theme-slice.js'
 
 import {
   FLUSH,
