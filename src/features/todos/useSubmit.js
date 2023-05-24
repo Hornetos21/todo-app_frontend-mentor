@@ -6,8 +6,10 @@ export const useSubmit = () => {
 
   return (event) => {
     event.preventDefault()
+    const text = event.target.title.value
+    if (!text) return
 
-    dispatch(addTodo(event.target.title.value))
+    dispatch(addTodo(text))
     event.target.reset()
   }
 }

@@ -30,7 +30,10 @@ const todoSlice = createSlice({
       return state.filter((todo) => !todo.completed)
     },
     reorder: (state, action) => {
-      return (state = action.payload)
+      if (!action.payload?.destination) return
+
+      const [reorderedTodo] = state.splice(action.payload.source.index, 1)
+      state.splice(action.payload.destination.index, 0, reorderedTodo)
     },
   },
 })
