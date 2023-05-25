@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://your-solution-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/app-todo-with-react-rtk-beautifuldnd-1LvbtMl3Go)
 - [Live Site URL](https://todo-app-frontend-mentor-inky.vercel.app/)
 
 ## My process
