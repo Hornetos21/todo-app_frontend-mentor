@@ -32,8 +32,9 @@
     }
 
     .todo .checker:hover:not(:checked)::after {
-        width: 2.2rem;
-        height: 2.2rem;
+        padding: 1.1rem;
+        /*width: 2.2rem;*/
+        /*height: 2.2rem;*/
         left: 0.15rem;
     }
 

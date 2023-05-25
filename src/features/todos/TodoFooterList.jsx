@@ -1,11 +1,11 @@
 import Filters from '../filters/Filters.jsx'
 import { useDispatch, useSelector } from 'react-redux'
-import { clearCompleted, selectVisibleTodos } from './todo-slice.js'
+import { clearCompletedTodos, selectVisibleTodos } from './todo-slice.js'
 
 const TodoFooterList = () => {
   const dispatch = useDispatch()
   const todosLeft = useSelector((state) => selectVisibleTodos(state, 'active'))
-  const handleClear = () => dispatch(clearCompleted())
+  const handleClear = () => dispatch(clearCompletedTodos())
 
   return (
     <div className="footer-list block">

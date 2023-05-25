@@ -1,10 +1,9 @@
-import { NewTodo } from './features/todos/NewTodo.jsx'
-import { TodoList } from './features/todos/TodoList.jsx'
+import NewTodo from './features/todos/NewTodo'
+import TodoList from './features/todos/TodoList'
 
-import './index.css'
-import TodoFooterList from './features/todos/TodoFooterList.jsx'
-import Header from './components/Header.jsx'
-import Footer from './components/Footer.jsx'
+import TodoFooterList from './features/todos/TodoFooterList'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 export default function App() {
   return (

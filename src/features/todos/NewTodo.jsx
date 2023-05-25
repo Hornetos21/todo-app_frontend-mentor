@@ -1,18 +1,20 @@
-import { useSubmit } from './useSubmit.js'
+import { useSubmit } from './useSubmit'
 
-export const NewTodo = () => {
+const NewTodo = () => {
   const handleSubmit = useSubmit()
 
   return (
     <form className="form block" onSubmit={handleSubmit}>
-      <div className="checker"></div>
+      <button className="submit-btn checker" onSubmit={handleSubmit}>
+        <div className="arrow"></div>
+      </button>
       <input
         type="text"
         name="title"
         placeholder="Create a new todo..."
         className="new-todo"
       />
-      {/*<input type="submit" value="Add Todo" />*/}
     </form>
   )
 }
+export default NewTodo

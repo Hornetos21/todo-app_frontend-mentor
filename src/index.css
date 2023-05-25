@@ -22,6 +22,7 @@
 
 html {
     font-size: 62.5%;
+    overflow-y: overlay;
 }
 
 ul {
@@ -76,42 +77,41 @@ body {
 
 .container {
     margin: 0 auto;
-    padding: 48px 24px;
+    padding: 4.8rem 2.4rem;
     position: relative;
-    max-width: 540px;
+    max-width: 54rem;
 }
 
 /*Header*/
 .bg {
     background: var(--image-bg-mob) center/cover no-repeat;
-    height: 200px;
+    height: 20rem;
     width: 100%;
     position: absolute;
 }
 
 h1 {
     color: hsl(0, 0%, 98%);
-    letter-spacing: 10px;
+    letter-spacing: 1rem;
     font-size: 2.7rem;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 34px;
+    margin-bottom: 3.4rem;
 }
 
 .icon {
-    height: 20px;
-    width: 20px;
+    height: 2rem;
+    width: 2rem;
     cursor: pointer;
 }
 
 /*----------------------*/
 .block {
-    padding: 14px 20px;
+    padding: 1.4rem 2rem;
     background-color: var(--bg-content);
-
 }
 
 .todos {
@@ -132,7 +132,7 @@ h1 {
 /*NewTodo*/
 .form {
     display: flex;
-    margin-bottom: 17px;
+    margin-bottom: 1.7rem;
     width: 100%;
     border-radius: var(--r5);
 }
@@ -146,23 +146,45 @@ h1 {
     background: inherit;
     caret-color: var(--primary-BrightBlue);
 }
-
-/*----------------------*/
-
-/*List*/
-.list{
-    position: relative;
+.submit-btn {
+    background-color: inherit;
 }
+.submit-btn:hover {
+    background-image: var(--gradient);
+}
+
+.arrow {
+    height: 100%;
+    width: 100%;
+    background: url("./assets/arrow-down-short.svg");
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+/*List------------------*/
+.list {
+    background: var(--bg);
+}
+
 .todo {
-    position: relative;
-    padding: 16px 20px;
+    padding: 1.6rem 2rem;
     display: flex;
     align-items: center;
     border-bottom: solid 1px var(--border);
     background-color: var(--bg-content);
     color: var(--text-todo);
     font-weight: 300;
-    cursor: grab;
+}
+
+.todo--dragging {
+    box-shadow: 0 3px 15px 0 var(--shadow-color);
+    border-radius: var(--r5);
+    border: 1px solid var(--primary-BrightBlue);
 }
 
 .checker {
@@ -171,32 +193,18 @@ h1 {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
-    margin-right: 12px;
+    margin-right: 1.2rem;
     flex: none;
     cursor: pointer;
 }
-/*.circle{
-    position: absolute;
-    top: 21.7px;
-    left: 21.7px;
-    background: var(--gradient);
-    height: 21px;
-    width: 21px;
-    border-radius: 50%;
-}*/
-
-.todo .checker {
-    background: transparent;
-    transition: background 1s;
-}
 
 .todo .checker:hover {
-    background: var(--gradient);
+    background-image: var(--gradient);
     border: 0;
-    transition: background 1s;
+
 }
 
 /*Border*/
@@ -210,7 +218,6 @@ h1 {
     border-radius: 50%;
     background: var(--bg-content);
     opacity: 0;
-    /*transition: opacity 0.5s;*/
 }
 
 /*Completed todos*/
@@ -220,8 +227,9 @@ h1 {
     position: absolute;
     top: 0.5rem;
     right: 0.4rem;
-    transition: opacity 0.5s ease-in;
+    transition: opacity 0.3s;
 }
+
 .todo .checker:hover:not(:checked)::after {
     opacity: 1;
 }
@@ -242,6 +250,8 @@ label {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-decoration: line-through transparent;
+    transition: text-decoration 0.3s;
 
 }
 
@@ -249,7 +259,6 @@ label {
     color: var(--text-line-thought);
     text-decoration: line-through;
 }
-
 
 .todo .delete-btn {
     transition: opacity 0.3s ease-in;
@@ -262,7 +271,6 @@ label {
     border: none;
     margin-left: auto;
 }
-
 
 .todo:hover .delete-btn {
     opacity: 1;
@@ -289,12 +297,12 @@ label {
 
 .filters--mobile {
     position: absolute;
-    bottom: -62px;
+    bottom: -6.2rem;
     left: 0;
     right: 0;
     box-shadow: 0 0 10px 0 var(--shadow-color);
     border-radius: var(--r5);
-    padding: 16px;
+    padding: 1.6rem;
 }
 
 .length-todos {
@@ -336,7 +344,7 @@ label {
     font-size: 1.4rem;
     color: var(--text-filters);
     text-align: center;
-    margin-top: 106px;
+    margin-top: 10.6rem;
 }
 
 .attribution {
