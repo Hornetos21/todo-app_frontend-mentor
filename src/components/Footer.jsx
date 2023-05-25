@@ -1,4 +1,4 @@
-const gitHub = ''
+const gitHub = 'https://github.com/Hornetos21'
 const urlChallenge =
   'https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW'
 const Footer = () => {
