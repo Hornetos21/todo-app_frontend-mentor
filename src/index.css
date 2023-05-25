@@ -204,7 +204,6 @@ h1 {
 .todo .checker:hover {
     background-image: var(--gradient);
     border: 0;
-
 }
 
 /*Border*/
@@ -252,7 +251,6 @@ label {
     text-overflow: ellipsis;
     text-decoration: line-through transparent;
     transition: text-decoration 0.3s;
-
 }
 
 .checker:checked + label {
